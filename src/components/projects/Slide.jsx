@@ -14,12 +14,11 @@ const Slide = ({title, description, githubURL, liveURL, techStack}) => {
   };
 
   return (
-    <div className="mx-auto flex items-center justify-center">
-      <div
+    <div className="mx-auto flex items-center justify-center p-4">
+      <motion.div
         style={{
           "--dark-purple": "4 6 22",
           "--light-purple": "120 119 198",
-
           "--bg-color": "linear-gradient(rgb(var(--dark-purple)), rgb(var(--dark-purple)))",
           "--border-color": `linear-gradient(145deg,
             rgb(var(--light-purple)) 0%,
@@ -28,74 +27,104 @@ const Slide = ({title, description, githubURL, liveURL, techStack}) => {
             rgb(var(--light-purple) / 0.1) 100%)
           `,
         }}
-        className="dark:[background:padding-box_var(--bg-color),border-box_var(--border-color)] border border-transparent group relative lg:max-w-md max-w-lg rounded-3xl  bg-white dark:bg-gray-900 p-8"
+        className="group relative lg:max-w-md max-w-lg rounded-3xl 
+                   bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl
+                   border border-white/20 dark:border-gray-700/50
+                   shadow-2xl hover:shadow-3xl transition-all duration-500
+                   p-8 hover:scale-105 hover:-translate-y-2"
         onMouseMove={handleMouseMove}
       >
-        <motion.div
-          className="hidden dark:block pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100"
-          style={{
-            background: useMotionTemplate`radial-gradient(
-                                          650px circle at ${mouseX}px ${mouseY}px,
-                                          rgb(14 165 233 / 20%),
-                                          transparent 80%
-                                          )`,
-          }}
-        />
-        <div>
-          <h3 className="lg:text-2xl text-lg font-extrabold tracking-wide leading-7 text-black font-poppins dark:text-white">
+        {/* Gradient overlay on hover */}
+        <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        
+        {/* Animated border gradient */}
+        <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
+        
+        <div className="relative z-10">
+          {/* Project title */}
+          <motion.h3 
+            className="text-2xl font-bold text-gray-800 dark:text-white mb-4
+                       bg-gradient-to-r from-gray-800 to-gray-600 dark:from-white dark:to-gray-300 
+                       bg-clip-text text-transparent"
+          >
             {title}
-          </h3>
-          <p
-            className="mt-4
-                     text-gray-700 dark:text-gray-300
-                    tracking-tight leading-6
-                    text-sm lg:text-xl"
+          </motion.h3>
+
+          {/* Project description */}
+          <motion.p 
+            className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed
+                       text-sm md:text-base"
           >
             {description}
-          </p>
-          <ul
-            className="mt-8 space-y-2
-                    text-gray-700 dark:text-gray-300  leading-6 
-                    grid grid-rows-3 grid-cols-2 gap-1"
-          >
-            {techStack.map((tech) => (
-              <li key={tech.name} className="flex gap-2 justify-start items-center col-span-1">
-                {tech.icon}
-                <span>{tech.name}</span>
-              </li>
-            ))}
-          </ul>
+          </motion.p>
 
-          <div className="w-full flex gap-4 mt-8">
-            <a
+          {/* Tech stack */}
+          <motion.div 
+            className="flex flex-wrap gap-2 mb-6"
+          >
+            {techStack.map((tech, index) => (
+              <motion.span
+                key={tech.name}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: index * 0.1 }}
+                className="flex items-center gap-1 px-3 py-1.5 rounded-full
+                           bg-gradient-to-r from-blue-100 to-purple-100 
+                           dark:from-blue-900/30 dark:to-purple-900/30
+                           border border-blue-200/50 dark:border-blue-700/50
+                           text-blue-700 dark:text-blue-300 text-xs font-medium
+                           hover:scale-105 transition-transform duration-200"
+              >
+                {tech.icon}
+                {tech.name}
+              </motion.span>
+            ))}
+          </motion.div>
+
+          {/* Action buttons */}
+          <motion.div 
+            className="flex gap-3"
+          >
+            <motion.a
               href={githubURL}
               target="_blank"
-              className="w-full
-                    bg-white  dark:bg-gray-700 dark:text-white
-                      rounded-lg p-2
-                      flex gap-2 justify-center items-center
-                    hover:bg-gray-200
-                    dark:hover:bg-gray-600 border border-gray-600 dark:border-gray-400"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg
+                         bg-gradient-to-r from-gray-800 to-gray-700 
+                         dark:from-gray-700 dark:to-gray-600
+                         text-white font-medium text-sm
+                         hover:from-gray-700 hover:to-gray-600 
+                         dark:hover:from-gray-600 dark:hover:to-gray-500
+                         transition-all duration-300 shadow-lg hover:shadow-xl
+                         hover:scale-105"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <BsGithub />
-              <span className="text-gray-600 dark:text-white">Github</span>
-            </a>
-            <a
+              <BsGithub className="text-lg" />
+              GitHub
+            </motion.a>
+            
+            <motion.a
               href={liveURL}
               target="_blank"
-              className="w-full
-                    bg-white  dark:bg-gray-700 dark:text-white
-                      rounded-lg p-2
-                      flex gap-2 justify-center items-center
-                    hover:bg-gray-200
-                      dark:hover:bg-gray-600 border border-gray-600 dark:border-gray-400"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg
+                         bg-gradient-to-r from-blue-600 to-purple-600 
+                         dark:from-blue-500 dark:to-purple-500
+                         text-white font-medium text-sm
+                         hover:from-blue-500 hover:to-purple-500 
+                         dark:hover:from-blue-400 dark:hover:to-purple-400
+                         transition-all duration-300 shadow-lg hover:shadow-xl
+                         hover:scale-105"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <CgWebsite />
-              <span className="text-gray-600 dark:text-white">Live</span>
-            </a>
-          </div>
+              <CgWebsite className="text-lg" />
+              Live Demo
+            </motion.a>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

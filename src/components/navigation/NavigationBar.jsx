@@ -13,11 +13,7 @@ const NavigationBar = () => {
   return (
     <header id="navbar" className="w-full fixed top-0 z-[1000] ">
       <nav
-        className="shadow-lg 
-                      flex items-center justify-between 
-                      md:px-10 px-5 
-                      h-16
-                      backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-black/60"
+        className="fixed top-8 left-1/2 -translate-x-1/2 z-50 w-[98vw] max-w-6xl bg-white/80 dark:bg-[#181a2a]/90 backdrop-blur-2xl rounded-3xl shadow-2xl flex items-center justify-between px-14 py-6 transition-all duration-300 hover:scale-[1.03] border border-white/40 dark:border-white/10 gap-10"
       >
         <motion.div
           variants={slideIn("left", "spring", 0.2, 0.5)}
@@ -34,8 +30,8 @@ const NavigationBar = () => {
             });
           }}
         >
-          <img src={logo} alt="logo" className="h-10 sm:12 dark:hidden" />
-          <img src={logoWhite} alt="logo" className="hidden h-10 sm:12 dark:flex" />
+          <img src={logo} alt="logo" className="h-20 w-20 dark:hidden" />
+          <img src={logoWhite} alt="logo" className="hidden h-20 w-20 dark:flex" />
         </motion.div>
         <div className="flex gap-6 relative">
           <div

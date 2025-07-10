@@ -148,7 +148,7 @@ export const TESTIMONIALS = [
     name: "Ashraf Habash",
     occupation: "Senior Product Manager @ H&M | Delivering Innovative Solutions, Leading Teams",
     recommendationText:
-      "I worked together with Hardik at the Swedish retailer H&M. I was his direct manager from the client side. Hardik was a great team player, he had good social skills and was always helpful in the team and gets things done. He had a down to earth approach and connected well with everyone in the team. He was a quick learner and had a great knowledge in the system flow, the programming and architecture as well as the business processes; all this made him fast in building the best solution in an effective way. Hardik was a focused person and was fast in his work but what I appreciate is the quality of his work which served us well. He was a direct and open communicator and helped us detect problems early and deal with them before they grow more. I highly recommend Hardik for software development positions specially roles where he will lead and coach other people.",
+      "Abhigyan is a great team player, he had good social skills and was always helpful in the team and gets things done. He had a down to earth approach and connected well with everyone in the team. He was a quick learner and had a great knowledge in the system flow, the programming and architecture as well as the business processes; all this made him fast in building the best solution in an effective way. Abhigyan was a focused person and was fast in his work but what I appreciate is the quality of his work which served us well. He was a direct and open communicator and helped us detect problems early and deal with them before they grow more. I highly recommend Abhigyan  for software development positions specially roles where he will lead and coach other people.",
     avatar: "ashraf",
   },
   {
@@ -156,42 +156,42 @@ export const TESTIMONIALS = [
     occupation:
       "Principal - Product Management Fidelity Investments | MBA IIMI | CSPO® | ACSPO® | SAFe® 5 POPM | ESIC Spain | ex-Accenture",
     recommendationText:
-      "Hardik is one of the most valuable people I have ever met. He always puts the team before him and truly embodies the agile model of working. He is observant, proactive, and goal-oriented. It’s a pleasure working with Hardik.",
+      "Abhigyan  is one of the most valuable people I have ever met. He always puts the team before him and truly embodies the agile model of working. He is observant, proactive, and goal-oriented. It’s a pleasure working with Abhigyan .",
     avatar: "siddharth",
   },
   {
     name: "Maja Ginsburg Duvstedt",
     occupation: "Effektiv ekonom, coachande gruppledare, driven projekt- och förändringsledare. ",
     recommendationText:
-      "I had the opportunity to have Hardik in my team at H&M. Hardik is very thorough, skilled and he has a way of understanding things quickly and therefore he delivers fast. He is also service-minded and a nice, cooperative team member!",
+      "Abhigyan  is very thorough, skilled and he has a way of understanding things quickly and therefore he delivers fast. He is also service-minded and a nice, cooperative team member!",
     avatar: "maja",
   },
   {
     name: "Fredrik Garinder",
     occupation: "Engineering Manager at H&M Group",
     recommendationText:
-      "I had a wonderful time working with Hardik, both joyful and with lots of room for growth and learning opportunities. If you are in search of a solid team player with focus on the task at hand you've found it.",
+      "Abhigyan is , both joyful and with lots of room for growth and learning opportunities. If you are in search of a solid team player with focus on the task at hand you've found it.",
     avatar: "fredrik",
   },
   {
     name: "Priyalakshumi P",
     occupation: "Software Engineer(MTS) @ Salesforce",
     recommendationText:
-      "Hardik, has a great technical expertise in designing scalable solutions. He approaches each requirement with different notion to bring out the best value to the product. He is skilled in driving the project with good communication and collaboration efficiency. He is a passionate learner and incorporate his learnings in action to deliver finest results.",
+      "Abhigyan , has a great technical expertise in designing scalable solutions. He approaches each requirement with different notion to bring out the best value to the product. He is skilled in driving the project with good communication and collaboration efficiency. He is a passionate learner and incorporate his learnings in action to deliver finest results.",
     avatar: "priya",
   },
   {
     name: "Harini Renganathan",
     occupation: "Product Owner for SAFe, Scrum Teams | Business Analyst | Erstwhile Scrum Master",
     recommendationText:
-      "Hardik has clarity of thoughts and a super cool brain. His approach to a technical problem at work is very logical. He is self motivated and is effective at time management and working towards a goal.",
+      "Abhigyan  has clarity of thoughts and a super cool brain. His approach to a technical problem at work is very logical. He is self motivated and is effective at time management and working towards a goal.",
     avatar: "harini",
   },
   {
     name: "Sanjana Ganguly",
     occupation: "Senior Software Engineer at Barclays",
     recommendationText:
-      "Hardik and I have worked on several projects together, and undoubtedly, he is an extremely diligent and smart co-worker. He consistently gives his 100 percent effort to the team and plays a significant role in ensuring that we meet our deadlines on time. His ability to develop new ways to achieve the targets have always been remarkable. He has a knack for learning new technologies. I am delighted to work and learn with such professionals.",
+      "Abhigyan, he is an extremely diligent and smart co-worker. He consistently gives his 100 percent effort to the team and plays a significant role in ensuring that we meet our deadlines on time. His ability to develop new ways to achieve the targets have always been remarkable. He has a knack for learning new technologies. I am delighted to work and learn with such professionals.",
     avatar: "sanjana",
   },
 ];

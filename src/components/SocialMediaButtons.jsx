@@ -14,7 +14,7 @@ const SocialMediaButtons = () => {
     >
       <motion.a
         variants={fadeInRotateX()}
-        href="https://github.com/hardikverma22"
+        href="https://github.com/Abhigyan09"
         className="rounded-xl w-10 h-10 p-1"
         target="_blank"
       >
@@ -27,7 +27,7 @@ const SocialMediaButtons = () => {
       </motion.a>
       <motion.a
         variants={fadeInRotateX()}
-        href="https://www.linkedin.com/in/hardikverma22"
+        href="https://www.linkedin.com/in/abhigyan-yadav/"
         target="_blank"
       >
         <BsLinkedin

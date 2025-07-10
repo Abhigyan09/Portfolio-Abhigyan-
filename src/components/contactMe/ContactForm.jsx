@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 import {BsCheck, MdErrorOutline} from "src/components/icons";
 import {Input} from "src/components/ui/input";
 import {Textarea} from "src/components/ui/textarea";
+import { motion } from "framer-motion";
 
 const ContactForm = () => {
   const formRef = useRef();
@@ -45,17 +46,22 @@ const ContactForm = () => {
 
   return (
     <>
+      <div className="text-center mb-8">
+        <h3 className="text-2xl font-bold text-white mb-2">Send a Message</h3>
+        <p className="text-gray-300">I'd love to hear from you. Let's start a conversation!</p>
+      </div>
+
       <form ref={formRef} onSubmit={handleSubmit(onSubmit)} noValidate>
-        <div className="flex flex-col gap-8">
-          <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-2">
             <label
               htmlFor="name"
               className={`${
                 errors.name
-                  ? "text-red-500"
+                  ? "text-red-400"
                   : touchedFields.name
-                  ? "text-green-600"
-                  : "text-gray-500 dark:text-white"
+                  ? "text-green-400"
+                  : "text-gray-300"
               } text-sm font-medium`}
             >
               Your Name
@@ -71,30 +77,35 @@ const ContactForm = () => {
                 type="text"
                 name="name"
                 disabled={isSending}
+                placeholder="Enter your name"
                 className={`${
                   errors.name
-                    ? "border-red-500"
+                    ? "border-red-400 bg-red-500/10"
                     : touchedFields.name
-                    ? "border-green-600"
-                    : "border-gray-500 dark:border-white"
-                } flex justify-center`}
+                    ? "border-green-400 bg-green-500/10"
+                    : "border-gray-600 bg-white/5 dark:bg-black/20"
+                } text-white placeholder:text-gray-400 
+                   backdrop-blur-sm rounded-xl px-4 py-3
+                   focus:ring-2 focus:ring-purple-500/50 focus:border-purple-400
+                   transition-all duration-300`}
               />
               <RenderInputIcon
                 hasError={errors.name || false}
                 isTouched={touchedFields.name || false}
               />
             </div>
-            {errors.name && <p className="text-red-500 pt-2">{errors.name.message}</p>}
+            {errors.name && <p className="text-red-400 text-sm pt-1">{errors.name.message}</p>}
           </div>
-          <div className="flex flex-col gap-1">
+          
+          <div className="flex flex-col gap-2">
             <label
               htmlFor="email"
               className={`${
                 errors.email
-                  ? "text-red-500"
+                  ? "text-red-400"
                   : touchedFields.email
-                  ? "text-green-600"
-                  : "text-gray-500 dark:text-white"
+                  ? "text-green-400"
+                  : "text-gray-300"
               } text-sm font-medium`}
             >
               Your Email
@@ -111,17 +122,21 @@ const ContactForm = () => {
                     message: "Oops! It looks like the email you entered isn't valid.",
                   },
                 })}
-                aria-invalid={errors?.name ? "true" : "false"}
-                type="text"
+                aria-invalid={errors?.email ? "true" : "false"}
+                type="email"
                 name="email"
                 disabled={isSending}
+                placeholder="Enter your email"
                 className={`${
                   errors.email
-                    ? "border-red-500"
+                    ? "border-red-400 bg-red-500/10"
                     : touchedFields.email
-                    ? "border-green-600"
-                    : "border-gray-500 dark:border-white"
-                } flex justify-center`}
+                    ? "border-green-400 bg-green-500/10"
+                    : "border-gray-600 bg-white/5 dark:bg-black/20"
+                } text-white placeholder:text-gray-400 
+                   backdrop-blur-sm rounded-xl px-4 py-3
+                   focus:ring-2 focus:ring-purple-500/50 focus:border-purple-400
+                   transition-all duration-300`}
               />
               <RenderInputIcon
                 hasError={errors.email || false}
@@ -129,18 +144,19 @@ const ContactForm = () => {
               />
             </div>
             {errors.email?.type === "required" && (
-              <p className="text-red-500 pt-2">{errors.email.message}</p>
+              <p className="text-red-400 text-sm pt-1">{errors.email.message}</p>
             )}
             {errors.email?.type === "pattern" && (
-              <p className="text-red-500 pt-2">{errors.email.message}</p>
+              <p className="text-red-400 text-sm pt-1">{errors.email.message}</p>
             )}
           </div>
-          <div className="flex flex-col gap-1">
+          
+          <div className="flex flex-col gap-2">
             <label
               htmlFor="message"
               className={`${
-                errors.message ? "text-red-500" : "text-gray-500 dark:text-white"
-              } text-gray-500 text-sm font-medium`}
+                errors.message ? "text-red-400" : "text-gray-300"
+              } text-sm font-medium`}
             >
               Message
             </label>
@@ -152,73 +168,70 @@ const ContactForm = () => {
                   required: "Would be great if you can add a message, I promise I read every word.",
                 })}
                 cols="30"
-                rows="10"
-                placeholder="write your message here"
+                rows="6"
+                placeholder="Tell me about your project or idea..."
                 aria-invalid={errors?.message ? "true" : "false"}
                 name="message"
                 disabled={isSending}
                 className={`${
                   errors.message
-                    ? "border-red-500"
+                    ? "border-red-400 bg-red-500/10"
                     : touchedFields.message
-                    ? "border-green-600"
-                    : "border-gray-500 dark:border-white"
-                } flex justify-center`}
+                    ? "border-green-400 bg-green-500/10"
+                    : "border-gray-600 bg-white/5 dark:bg-black/20"
+                } text-white placeholder:text-gray-400 
+                   backdrop-blur-sm rounded-xl px-4 py-3 resize-none
+                   focus:ring-2 focus:ring-purple-500/50 focus:border-purple-400
+                   transition-all duration-300`}
               />
               <RenderInputIcon
                 hasError={errors.message || false}
                 isTouched={touchedFields.message || false}
               />
-              {/* <textarea
-                autoComplete="off"
-                id="message"
-                {...register("message", {
-                  required: "Would be great if you can add a message, I promise I read every word.",
-                })}
-                name="message"
-               
-                placeholder="write your message here"
-                className={`w-full dark:text-white placeholder:text-sm placeholder:pt-2 resize-none h-32 border-b ${
-                  errors.message
-                    ? "placeholder:text-red-500 border-red-500"
-                    : touchedFields.message
-                    ? " border-green-500"
-                    : "placeholder:text-gray-500 border-gray-500 dark:border-white dark:placeholder:text-white"
-                }  focus:outline-none active:border-b bg-transparent disabled:bg-gray-100 disabled:rounded-sm`}
-                disabled={isSending}
-              />
-              {errors.message ? (
-                <MdErrorOutline className="absolute right-0 top-0 mx-auto text-2xl text-red-600" />
-              ) : touchedFields.message ? (
-                <BsCheck className="absolute right-0 top-0 mx-auto text-2xl text-green-600" />
-              ) : (
-                ""
-              )} */}
             </div>
-            {errors.message && <p className="text-red-500 pt-2">{errors.message.message}</p>}
+            {errors.message && <p className="text-red-400 text-sm pt-1">{errors.message.message}</p>}
           </div>
-          <button
-            disabled={!formState.isValid || isSending}
-            className={`p-2 h-full w-40 ${
-              !formState.isValid ? "bg-gray-500" : "bg-tertiary"
-            } text-white shadow-md rounded-lg disabled:bg-gray-500`}
+          
+          <motion.button
+            type="submit"
+            disabled={isSending}
+            className="w-full bg-gradient-to-r from-purple-600 to-blue-600 
+                       hover:from-purple-700 hover:to-blue-700 
+                       disabled:from-gray-600 disabled:to-gray-600
+                       text-white font-semibold py-4 px-8 rounded-xl
+                       shadow-lg hover:shadow-xl transition-all duration-300
+                       transform hover:scale-105 disabled:scale-100
+                       disabled:cursor-not-allowed"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
-            {isSending ? "Sending..." : "Send Message"}
-          </button>
+            {isSending ? (
+              <div className="flex items-center justify-center gap-2">
+                <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                Sending...
+              </div>
+            ) : (
+              "Send Message"
+            )}
+          </motion.button>
         </div>
       </form>
     </>
   );
 };
 
-export default ContactForm;
-
 const RenderInputIcon = ({hasError, isTouched}) => {
-  return hasError ? (
-    <MdErrorOutline className="absolute right-2 top-[25%] mx-auto text-2xl text-red-600" />
-  ) : isTouched ? (
-    <BsCheck className="absolute right-2 top-[25%] mx-auto text-2xl text-green-600" />
-  ) : (
-    ""
-  );
+  if (hasError) {
+    return (
+      <MdErrorOutline className="absolute right-3 top-1/2 transform -translate-y-1/2 text-xl text-red-400" />
+    );
+  }
+  if (isTouched) {
+    return (
+      <BsCheck className="absolute right-3 top-1/2 transform -translate-y-1/2 text-xl text-green-400" />
+    );
+  }
+  return null;
 };
+
+export default ContactForm;

@@ -76,16 +76,18 @@ const Intro = () => {
         <span className="align-bottom">Hello, I am</span>
         <DockPanel />
       </motion.div>
+      
       <motion.h1
         variants={slideUp(50)}
         className="text-6xl lg:text-9xl md:text-8xl drop-shadow-2xl
-                      uppercase
+                      uppercase font-black
                       bg-clip-text
                       bg-gradient-to-r
-                      from-secondary to-tertiary dark:to-white dark:from-secondary text-transparent
-                      font-archivo"
+                      from-secondary via-purple-600 to-tertiary dark:from-secondary dark:via-purple-400 dark:to-white text-transparent
+                      font-archivo relative"
       >
-        Hardik
+        Abhigyan
+        <div className="absolute -inset-1 bg-gradient-to-r from-secondary/20 via-purple-600/20 to-tertiary/20 dark:from-secondary/20 dark:via-purple-400/20 dark:to-white/20 blur-xl -z-10"></div>
       </motion.h1>
 
       <motion.div
@@ -93,41 +95,54 @@ const Intro = () => {
         initial="hidden"
         whileInView="show"
         viewport={{once: true}}
-        className="flex gap-2 w-full lg:pl-1
+        className="flex gap-3 w-full lg:pl-1
                   md:justify-start md:items-start md:flex-row flex-col justify-center items-center
-                  lg:text-md text-sm font-archivo  tracking-[0.04rem]
+                  lg:text-md text-sm font-archivo tracking-[0.04rem]
                   dark:text-white font-medium
-                  lg:pt-4 pt-2"
+                  lg:pt-6 pt-4"
       >
         <motion.span
           variants={animateX(50)}
-          className="bg-stone-300 dark:bg-gray-700 dark:text-white px-2 py-1 rounded-full flex gap-1 justify-center items-center"
+          className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 
+                     backdrop-blur-sm border border-blue-500/20 dark:border-blue-400/30 
+                     text-blue-700 dark:text-blue-300 px-4 py-2 rounded-full 
+                     flex gap-2 justify-center items-center font-medium shadow-lg hover:shadow-xl transition-all duration-300"
         >
-          <FaCode />
+          <FaCode className="text-blue-600 dark:text-blue-400" />
           Full Stack Developer
         </motion.span>
         <motion.span
           variants={animateX(50)}
-          className="bg-stone-300 dark:bg-gray-700 dark:text-white px-2 py-1 rounded-full flex gap-1 justify-center items-center"
+          className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 dark:from-green-500/20 dark:to-emerald-500/20 
+                     backdrop-blur-sm border border-green-500/20 dark:border-green-400/30 
+                     text-green-700 dark:text-green-300 px-4 py-2 rounded-full 
+                     flex gap-2 justify-center items-center font-medium shadow-lg hover:shadow-xl transition-all duration-300"
         >
-          <MdArchitecture /> Engineer
+          <MdArchitecture className="text-green-600 dark:text-green-400" /> 
+          Engineer
         </motion.span>
         <motion.span
           variants={animateX(50)}
-          className="bg-stone-300 dark:bg-gray-700 dark:text-white px-2 py-1 rounded-full flex gap-1 justify-center items-center"
+          className="bg-gradient-to-r from-pink-500/10 to-rose-500/10 dark:from-pink-500/20 dark:to-rose-500/20 
+                     backdrop-blur-sm border border-pink-500/20 dark:border-pink-400/30 
+                     text-pink-700 dark:text-pink-300 px-4 py-2 rounded-full 
+                     flex gap-2 justify-center items-center font-medium shadow-lg hover:shadow-xl transition-all duration-300"
         >
-          <FaPalette /> Passionate For Frontend
+          <FaPalette className="text-pink-600 dark:text-pink-400" /> 
+          Passionate For Frontend & Backend
         </motion.span>
       </motion.div>
+      
       <motion.div
         variants={fadeY(50, 1.7, 1)}
-        className="flex justify-start items-center lg:pl-1 lg:pt-4 pt-2"
+        className="flex justify-start items-center lg:pl-1 lg:pt-6 pt-4"
       >
         <div
-          className="hidden text-xl font-medium text-black dark:text-white
-          lg:flex flex-col md:flex-row justify-center items-center md:justify-start md:items-start"
+          className="hidden text-xl font-medium text-gray-700 dark:text-gray-200
+          lg:flex flex-col md:flex-row justify-center items-center md:justify-start md:items-start
+          backdrop-blur-sm bg-white/5 dark:bg-black/5 rounded-xl p-4 border border-white/10 dark:border-gray-700/50"
         >
-          <span>My passion lies in</span>
+          <span className="mr-2">My passion lies in</span>
           <FlipWords words={words} duration={5000} />
         </div>
       </motion.div>

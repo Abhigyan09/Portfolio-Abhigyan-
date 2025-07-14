@@ -3,13 +3,13 @@ import resume from "src/assets/resume.pdf";
 export function DockPanel() {
   return (
     <Dock>
-      <DockIcon href="https://github.com/hardikverma22">
+      <DockIcon href="https://github.com/Abhigyan09">
         <Icons.gitHub className="h-6 w-6" />
       </DockIcon>
-      <DockIcon href="https://www.linkedin.com/in/hardikverma22">
+      <DockIcon href="https://www.linkedin.com/in/abhigyan-yadav/">
         <Icons.linkedin className="h-6 w-6 text-[#0a66c2] fill-current dark:text-white" />
       </DockIcon>
-      <DockIcon href="https://wa.me/7550147914">
+      <DockIcon href="https://wa.me/8052466655">
         <Icons.whatsapp className="h-6 w-6 text-[#57d163] fill-current dark:text-[#414141]" />
       </DockIcon>
       <DockIcon href={resume}>

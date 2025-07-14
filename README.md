@@ -1,73 +1,69 @@
-# Portfolio
+# 🚀 Personal Portfolio – Modern Dev Showcase
 
-## Description
+> Built with ⚛️ React | 🎨 Tailwind CSS | 🎞️ Framer Motion | 📩 EmailJS  
+> Clean. Responsive. Interactive.
 
-Portfolio is a personal website built with React, Tailwind CSS, Framer Motion, React Hook Forms, and EmailJS.
-It showcases the technologies I know and provides information about me.
-It also includes a contact me form for easy communication.
+![Portfolio Banner] file:///var/folders/tl/j6ryn4jd0q77_cymrdhpgw500000gn/T/TemporaryItems/NSIRD_screencaptureui_Xg0Od0/Screenshot%202025-07-14%20at%202.41.26%E2%80%AFPM.png <!-- Optional: Add your banner or remove this line -->
 
-## Demo
+---
 
-Check out the live version of my portfolio [here](https://hardikverma22.github.io/Portfolio/).
+## 📌 Overview
 
-## Technologies Used
+This is my personal portfolio website – a modern, responsive, and animated digital resume.  
+It highlights:
 
-- React
-- Tailwind CSS
-- Framer Motion
-- React Hook Forms
-- EmailJS
+- 💻 My tech stack
+- 🔥 Featured projects
+- 👨‍💼 About me
+- 📬 Real-time contact form
 
-## Features
+> Designed with developer experience in mind, and powered by the latest frontend tools.
 
-- Display of technologies I know
-- Information about me and my background
-- Contact me form for easy communication
-- Responsive design for different screen sizes
-- Smooth animations and transitions
+---
 
-## Installation
+## 🌐 Live Demo
 
-To run the Shoe Forge locally, follow these steps:
+👉 [**View Live Portfolio**](https://your-portfolio-link.com)
 
-1. Clone the repository:
+---
 
-   ```
-   git clone https://github.com/hardikverma22/shoe-forge.git
-   ```
+## 🧰 Tech Stack
 
-2. Navigate to the project directory:
- 
-   ```
-   cd Portfolio
-   ```
+| Frontend        | Styling       | Animations       | Forms & Email |
+|-----------------|---------------|------------------|---------------|
+| React           | Tailwind CSS  | Framer Motion    | React Hook Form + EmailJS |
 
-3. Install the dependencies:
+---
 
-    ```
-    npm install
-    ```
-  
-4. Start the development server:
-  
-    ```
-    npm run dev
-    ```
-  
- 5. Open your browser and visit http://localhost:5173 to see the app in action.
+## ✨ Features
 
+- ✅ Skill & tech stack showcase
+- ✅ About Me section with subtle animations
+- ✅ Featured projects section with hover effects
+- ✅ Fully functional "Contact Me" form (no backend needed!)
+- ✅ Smooth route/page transitions using Framer Motion
+- ✅ Mobile-first, responsive layout
+- ✅ SEO-friendly & accessible
+- ✅ Optional dark mode (if implemented)
 
-## Contributing
-  Contributions are welcome! If you'd like to contribute to Shoe Forge, please follow these steps:
-  1. Fork the repository.
-  2. Create a new branch for your feature or bug fix.
-  3. Make your changes and commit them.
-  4. Push your changes to your fork.
-  5. Submit a pull request to the main branch of the original repository.
+---
 
-## Contact Me
-Feel free to reach out to me through the contact form on my portfolio website or via email at hardikverma22@gmail.com.
-I look forward to hear from you!
+## ⚙️ Getting Started
 
+To run this project locally:
 
-   
+```bash
+# 1. Clone the repository
+git clone (https://github.com/Abhigyan09/Portfolio-Abhigyan-.git)
+
+# 2. Navigate into the project directory
+cd portfolio
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the development server
+npm run dev
+
+# 5. Visit in your browser
+http://localhost:5173

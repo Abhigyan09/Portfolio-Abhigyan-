@@ -3,8 +3,7 @@
 > Built with ⚛️ React | 🎨 Tailwind CSS | 🎞️ Framer Motion | 📩 EmailJS  
 > Clean. Responsive. Interactive.
 
-![Portfolio Banner] file:///var/folders/tl/j6ryn4jd0q77_cymrdhpgw500000gn/T/TemporaryItems/NSIRD_screencaptureui_Xg0Od0/Screenshot%202025-07-14%20at%202.41.26%E2%80%AFPM.png <!-- Optional: Add your banner or remove this line -->
-
+o4dp6jdbgwuk0nowpja0
 ---
 
 ## 📌 Overview
@@ -120,7 +119,7 @@ This project is open-source under the MIT License.
 I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out through any of the platforms below:
 
 <p align="center">
-  <a href="mailto:aptabhigyan@gmail.com">
+  <a href="mailto:aptabhigyan@gmail.com" target="_blank">
     <img src="https://img.shields.io/badge/Email-%23D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
   <a href="https://www.linkedin.com/in/abhigyan-yadav/" target="_blank">

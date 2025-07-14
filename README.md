@@ -3,8 +3,8 @@
 > Built with ⚛️ React | 🎨 Tailwind CSS | 🎞️ Framer Motion | 📩 EmailJS  
 > Clean. Responsive. Interactive.
 
-o4dp6jdbgwuk0nowpja0
----
+![Portfolio Banner] https://res.cloudinary.com/dlumnd2nd/image/upload/v1752485131/o4dp6jdbgwuk0nowpja0.png
+
 
 ## 📌 Overview
 

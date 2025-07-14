@@ -4,6 +4,9 @@
 > Clean. Responsive. Interactive.
 
 ![Portfolio Banner](https://res.cloudinary.com/dlumnd2nd/image/upload/v1752485131/o4dp6jdbgwuk0nowpja0.png)
+![Portfolio Banner](https://res.cloudinary.com/dlumnd2nd/image/upload/v1752485796/hzk2pb3tntj8j6lclpsz.png)
+![Portfolio Banner](https://res.cloudinary.com/dlumnd2nd/image/upload/v1752485822/xmlpidlbvcbcaq5ttw3d.png)
+![Portfolio Banner](https://res.cloudinary.com/dlumnd2nd/image/upload/v1752485814/ai6qhxewb92oxvrmpyoq.png)
 
 
 ## 📌 Overview
@@ -116,19 +119,23 @@ This project is open-source under the MIT License.
 
 ### 📬 Let’s Connect
 
-I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out through any of the platforms below:
+I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.  
+Feel free to reach out through any of the platforms below:
 
 <p align="center">
   <a href="mailto:aptabhigyan@gmail.com" target="_blank">
     <img src="https://img.shields.io/badge/Email-%23D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
+  &nbsp;
   <a href="https://www.linkedin.com/in/abhigyan-yadav/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
+  &nbsp;
   <a href="https://github.com/Abhigyan09/Portfolio-Abhigyan-" target="_blank">
     <img src="https://img.shields.io/badge/Portfolio-%23121011?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" />
   </a>
 </p>
+
 
 > 💬 Prefer talking? Drop me an email and let’s schedule a quick call!
 

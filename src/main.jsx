@@ -7,11 +7,14 @@ import {
   ActiveIndexContext,
   ActiveIndexContextProvider,
 } from "src/contexts/ActiveIndexContextProvider";
+import { HashRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <ActiveIndexContextProvider>
-    <ThemeProvider>
-      <App />
-    </ThemeProvider>
-  </ActiveIndexContextProvider>
+  <HashRouter>
+    <ActiveIndexContextProvider>
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
+    </ActiveIndexContextProvider>
+  </HashRouter>
 );

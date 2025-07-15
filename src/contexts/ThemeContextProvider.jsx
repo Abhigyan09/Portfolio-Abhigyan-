@@ -10,7 +10,7 @@ export const useTheme = () => {
 };
 
 export const ThemeProvider = ({children}) => {
-  const [theme, setTheme] = useState(THEMES.LIGHT);
+  const [theme, setTheme] = useState(THEMES.DARK);
 
   const toggleTheme = () => {
     const currentTheme = theme === THEMES.DARK ? THEMES.LIGHT : THEMES.DARK;

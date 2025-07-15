@@ -2,6 +2,7 @@
 import {cn} from "lib/utils/cn";
 import {motion, useMotionValue, useSpring, useTransform} from "framer-motion";
 import React, {useRef} from "react";
+import { HashRouter as Router } from "react-router-dom";
 
 const DEFAULT_MAGNIFICATION = 60;
 const DEFAULT_DISTANCE = 140;

@@ -30,8 +30,8 @@ const NavigationBar = () => {
             });
           }}
         >
-          <img src={logo} alt="logo" className="h-20 w-20 dark:hidden" />
-          <img src={logoWhite} alt="logo" className="hidden h-20 w-20 dark:flex" />
+          <img src={logo} alt="logo" className="h-12 w-12 dark:hidden" />
+          <img src={logoWhite} alt="logo" className="hidden h-12 w-12 dark:flex" />
         </motion.div>
         <div className="flex gap-6 relative">
           <div
